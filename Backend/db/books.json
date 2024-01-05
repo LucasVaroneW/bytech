@@ -1,0 +1,182 @@
+[
+  {
+    "title": "Cien años de soledad",
+    "author": "Gabriel García Márquez",
+    "genre": "Fiction"
+  },
+  {
+    "title": "Don Quijote de la Mancha",
+    "author": "Miguel de Cervantes",
+    "genre": "Classics"
+  },
+  {
+    "title": "La sombra del viento",
+    "author": "Carlos Ruiz Zafón",
+    "genre": "Mystery"
+  },
+  {
+    "title": "Fuegos",
+    "author": "Mariano Azuela",
+    "genre": "Historical Fiction"
+  },
+  {
+    "title": "Rayuela",
+    "author": "Julio Cortázar",
+    "genre": "Experimental"
+  },
+  {
+    "title": "El túnel",
+    "author": "Ernesto Sabato",
+    "genre": "Novel"
+  },
+  {
+    "title": "Crónica de una muerte anunciada",
+    "author": "Gabriel García Márquez",
+    "genre": "Magical Realism"
+  },
+  {
+    "title": "Ficciones",
+    "author": "Jorge Luis Borges",
+    "genre": "Short Stories"
+  },
+  {
+    "title": "Los siete locos",
+    "author": "Roberto Arlt",
+    "genre": "Novel"
+  },
+  {
+    "title": "El Aleph",
+    "author": "Jorge Luis Borges",
+    "genre": "Short Stories"
+  },
+  {
+    "title": "Martín Fierro",
+    "author": "José Hernández",
+    "genre": "Epic Poetry"
+  },
+  {
+    "title": "La fiesta del chivo",
+    "author": "Mario Vargas Llosa",
+    "genre": "Historical"
+  },
+  {
+    "title": "Pedro Páramo",
+    "author": "Juan Rulfo",
+    "genre": "Magical Realism"
+  },
+  {
+    "title": "Los detectives salvajes",
+    "author": "Roberto Bolaño",
+    "genre": "Novel"
+  },
+  {
+    "title": "El principito",
+    "author": "Antoine de Saint-Exupéry",
+    "genre": "Children's"
+  },
+  {
+    "title": "Como agua para chocolate",
+    "author": "Laura Esquivel",
+    "genre": "Magical Realism"
+  },
+  {
+    "title": "Santuario",
+    "author": "William Faulkner",
+    "genre": "Southern Gothic"
+  },
+  {
+    "title": "Crimen y castigo",
+    "author": "Fiodor Dostoievski",
+    "genre": "Psychological Novel"
+  },
+  {
+    "title": "Drácula",
+    "author": "Bram Stoker",
+    "genre": "Gothic"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "Dystopia"
+  },
+  {
+    "title": "Orgullo y prejuicio",
+    "author": "Jane Austen",
+    "genre": "Romance"
+  },
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Classic"
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Fiction"
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genre": "Coming of Age"
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "genre": "Romance"
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy"
+  },
+  {
+    "title": "One Hundred Years of Solitude",
+    "author": "Gabriel García Márquez",
+    "genre": "Magical Realism"
+  },
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genre": "Dystopian"
+  },
+  {
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy"
+  },
+  {
+    "title": "The Girl on the Train",
+    "author": "Paula Hawkins",
+    "genre": "Thriller"
+  },
+  {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "genre": "Philosophical Fiction"
+  },
+  {
+    "title": "Frankenstein",
+    "author": "Mary Shelley",
+    "genre": "Gothic Horror"
+  },
+  {
+    "title": "The Hunger Games",
+    "author": "Suzanne Collins",
+    "genre": "Young Adult"
+  },
+  {
+    "title": "Moby-Dick",
+    "author": "Herman Melville",
+    "genre": "Adventure"
+  },
+  {
+    "title": "The Road",
+    "author": "Cormac McCarthy",
+    "genre": "Post-Apocalyptic"
+  },
+  {
+    "title": "The Color Purple",
+    "author": "Alice Walker",
+    "genre": "Drama"
+  }
+]
