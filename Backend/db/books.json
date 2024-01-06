@@ -5,6 +5,11 @@
     "genre": "Fiction"
   },
   {
+    "title": "Crónica de una muerte anunciada",
+    "author": "Gabriel García Márquez",
+    "genre": "Magical Realism"
+  },
+  {
     "title": "Don Quijote de la Mancha",
     "author": "Miguel de Cervantes",
     "genre": "Classics"
@@ -20,6 +25,11 @@
     "genre": "Historical Fiction"
   },
   {
+    "title": "Martín Fierro",
+    "author": "José Hernández",
+    "genre": "Epic Poetry"
+  },
+  {
     "title": "Rayuela",
     "author": "Julio Cortázar",
     "genre": "Experimental"
@@ -30,39 +40,9 @@
     "genre": "Novel"
   },
   {
-    "title": "Crónica de una muerte anunciada",
-    "author": "Gabriel García Márquez",
-    "genre": "Magical Realism"
-  },
-  {
-    "title": "Ficciones",
-    "author": "Jorge Luis Borges",
-    "genre": "Short Stories"
-  },
-  {
     "title": "Los siete locos",
     "author": "Roberto Arlt",
     "genre": "Novel"
-  },
-  {
-    "title": "El Aleph",
-    "author": "Jorge Luis Borges",
-    "genre": "Short Stories"
-  },
-  {
-    "title": "Martín Fierro",
-    "author": "José Hernández",
-    "genre": "Epic Poetry"
-  },
-  {
-    "title": "La fiesta del chivo",
-    "author": "Mario Vargas Llosa",
-    "genre": "Historical"
-  },
-  {
-    "title": "Pedro Páramo",
-    "author": "Juan Rulfo",
-    "genre": "Magical Realism"
   },
   {
     "title": "Los detectives salvajes",
@@ -70,19 +50,24 @@
     "genre": "Novel"
   },
   {
-    "title": "El principito",
-    "author": "Antoine de Saint-Exupéry",
-    "genre": "Children's"
+    "title": "Ficciones",
+    "author": "Jorge Luis Borges",
+    "genre": "Short Stories"
   },
   {
-    "title": "Como agua para chocolate",
-    "author": "Laura Esquivel",
+    "title": "El Aleph",
+    "author": "Jorge Luis Borges",
+    "genre": "Short Stories"
+  },
+  {
+    "title": "Pedro Páramo",
+    "author": "Juan Rulfo",
     "genre": "Magical Realism"
   },
   {
-    "title": "Santuario",
-    "author": "William Faulkner",
-    "genre": "Southern Gothic"
+    "title": "La fiesta del chivo",
+    "author": "Mario Vargas Llosa",
+    "genre": "Historical"
   },
   {
     "title": "Crimen y castigo",
@@ -100,7 +85,7 @@
     "genre": "Dystopia"
   },
   {
-    "title": "Orgullo y prejuicio",
+    "title": "Pride and Prejudice",
     "author": "Jane Austen",
     "genre": "Romance"
   },
@@ -120,19 +105,9 @@
     "genre": "Coming of Age"
   },
   {
-    "title": "Pride and Prejudice",
-    "author": "Jane Austen",
-    "genre": "Romance"
-  },
-  {
     "title": "The Hobbit",
     "author": "J.R.R. Tolkien",
     "genre": "Fantasy"
-  },
-  {
-    "title": "One Hundred Years of Solitude",
-    "author": "Gabriel García Márquez",
-    "genre": "Magical Realism"
   },
   {
     "title": "Brave New World",
