@@ -1,10 +1,11 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import axios from 'axios';
 import { useAuth } from './AuthContext';
 import '../styles/dashboard.css';
 import BookList from './BookList';
 import { ToastContainer, toast, ToastOptions } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ModalForm from './ModalForm';
 
 export type Book = {
   id: number;
@@ -26,8 +27,11 @@ const Dashboard: React.FC = () => {
   const [activeTab, setActiveTab] = useState<number>(1);
   const [userBooks, setUserBooks] = useState<Book[]>([]);
   const [selectedUserBook, setSelectedUserBook] = useState<number | null>(null);
+  const [isModalOpen, setModalOpen] = useState<boolean>(false);
+  const [lastAction, setLastAction] = useState<string>('');
 
-  const toastOptions: ToastOptions = {
+
+  const toastOptions: ToastOptions = useMemo(() => ({
     position: 'top-right',
     autoClose: 3000,
     hideProgressBar: false,
@@ -40,6 +44,14 @@ const Dashboard: React.FC = () => {
       backgroundColor: '#d6e6f7',
       color: '#2c2b2bb4',
     },
+  }), []);
+
+  const handleOpenModal = () => {
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
   };
 
   const tabsData: Tab[] = [
@@ -71,6 +83,16 @@ const Dashboard: React.FC = () => {
   useEffect(() => {
     let isMounted = true;
   
+    if (lastAction === 'success') {
+      toast.success('Successful modification', toastOptions);
+    }
+
+    if (lastAction === 'error') {
+      toast.error('Error when modifying', toastOptions);
+    }
+
+    setLastAction('');
+
     const fetchDataAndAssociations = async () => {
       try {
         setLoading(true);
@@ -94,7 +116,7 @@ const Dashboard: React.FC = () => {
     return () => {
       isMounted = false;
     };
-  }, [token, getAssociatesUserBooks]);
+  }, [token, getAssociatesUserBooks, lastAction, toastOptions]);
 
   const handleBookSelection = (bookId: number) => {
     setSelectedBooks((prevSelectedBooks) => {
@@ -143,7 +165,13 @@ const Dashboard: React.FC = () => {
     }
   };
   
-  
+  const handleModalSuccess = () => {
+    setLastAction('success');
+  };
+
+  const handleModalError = () => {
+    setLastAction('error');
+  };
 
   const handleRowClick = (book: Book) => {
     setSelectedUserBook(book.id === selectedUserBook ? null : book.id);
@@ -199,7 +227,13 @@ const Dashboard: React.FC = () => {
                 selectedBooks={selectedBooks}
                 loading={loading}
                 onBookSelection={handleBookSelection}
+                inputSearch={true}
+                onSuccess={handleModalSuccess}
+                onError={handleModalError}
               />
+              <div className='btn-container'>
+                <button className='btn-add-book' onClick={handleOpenModal}>Add Book</button>
+              </div>
             </div>
             <div className="selected-books-container">
               <BookList
@@ -208,14 +242,16 @@ const Dashboard: React.FC = () => {
                 selectedBooks={selectedBooks}
                 loading={loading}
                 onBookSelection={handleBookSelection}
+                inputSearch={false}
                 renderBookInfo={(book) => (
                   <>
                     {book.title} by {book.author}
                   </>
                 )}
               />
-
-              <button className='buttonAssociate' onClick={handleAssociateBooks}>Associate</button>
+              <div className='btn-container'>
+                <button className='btn-associate' onClick={handleAssociateBooks}>Associate</button>
+              </div>
             </div>
           </>
         )}
@@ -259,6 +295,7 @@ const Dashboard: React.FC = () => {
         )}
       </div>
       <ToastContainer />
+      <ModalForm isOpen={isModalOpen} onClose={handleCloseModal} onSuccess={handleModalSuccess} onError={handleModalError}/>
     </div>
   );
 };

@@ -32,8 +32,12 @@ router.get('/getBook/:id', async(req, res) => {
 router.post('/newBook', async(req, res) =>{
     const {title, author, genre} = req.body;
 
+    if (!title || !author) {
+        return res.status(400).json({ error: 'Title and author are required fields' });
+    }
+
     try{
-        const newBook = new Book.create({ title, author, genre});
+        const newBook = await Book.create({ title, author, genre});
         res.json(newBook);
     } catch(error){
         console.error('Error when creating a new book: ', error);
@@ -56,14 +60,44 @@ router.put('/updateBook/:id', async(req, res) => {
 });
 
 // DELETE A BOOK
-router.delete('deleteBook/:id', async(req, res) => {
-    const { id } = req.body;
-
+router.delete('/deleteBook/:id', async(req, res) => {
+    const { id } = req.params;
     try{
+        if (isNaN(id)) {
+            return res.status(400).json({ error: 'Invalid book ID' });
+          }
+      
+          const book = await Book.findByPk(id);
+      
+          if (!book) {
+            return res.status(404).json({ error: 'Book not found' });
+          }
         await Book.destroy({ where: { id } });
         res.json({ message: 'Book deleted correctly' });
     } catch(error) {
         console.error('Error deleting book: ', error);
+        res.status(500).json({ error: 'Internal error server' });
+    }
+});
+
+// SEARCH BOOKS
+router.get('/searchBooks', async (req, res) => {
+    const { query } = req.query;
+
+    try {
+        const books = await Book.findAll({
+            where: {
+                [Op.or]: [
+                    { title: { [Op.like]: `%${query}%` } },
+                    { author: { [Op.like]: `%${query}%` } },
+                    { genre: { [Op.like]: `%${query}%` } }
+                ]
+            }
+        });
+
+        res.json(books);
+    } catch (error) {
+        console.error('Error searching books: ', error);
         res.status(500).json({ error: 'Internal error server' });
     }
 });
