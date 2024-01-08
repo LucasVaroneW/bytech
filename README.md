@@ -47,11 +47,11 @@ The project consists of frontend and backend components:
 
 
 4. Start the backend server:
-
-  ```bash
-  nodemon index.js
-  ```
-The backend server should be accessible at http://localhost:3000.
+   
+     ```bash
+     nodemon index.js
+     ```
+   The backend server should be accessible at http://localhost:3000.
 
 
 ### Frontend
