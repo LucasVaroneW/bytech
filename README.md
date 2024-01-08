@@ -33,17 +33,17 @@ The project consists of frontend and backend components:
    ```
 
 2. Install dependencies:
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 3. Configure the database:
 
-  If you have a password for the root user:
-
-  Open backend/config/config.json and backend/createDataBase.js
-  
-  Update the password field with your MySQL server password.
+     If you have a password for the root user:
+   
+     Open backend/config/config.json and backend/createDataBase.js
+     
+     Update the password field with your MySQL server password.
 
 
 4. Start the backend server:
